@@ -7,14 +7,18 @@
     <meta name="theme-color" content="#124735" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="title" content="Know your Investor Risk Profile!" />
-    <meta name="description" content="This is a simple assessment tool to assist you in determining your investing
-    style and risk tolerance level and to help you choose the mutual fund that suit
-    your profile. The evaluation is based on your current profile and for reference only. " />
-    <meta property="og:title" content="Know your Investor Risk Profile today!" />
-    <meta property="og:description" content="Find your risk profile and discover the right fund for you!" />
+    <meta name="title" content="Investment Projection Calculator" />
+    <meta name="description" content="his is a simple projection tool made to assist you in in planning and
+    visualizing your investing
+    journey based on your budget and risk profile to help you choose the mutual fund that suit
+    your needs." />
+    <meta property="og:title" content="Investment Projection Calculator" />
+    <meta property="og:description" content="his is a simple projection tool made to assist you in in planning and
+    visualizing your investing
+    journey based on your budget and risk profile to help you choose the mutual fund that suit
+    your needs." />
     <meta property="og:url" content="" />
-    <meta property="og:image" content="https://rampver.sirv.com/fund-images/ppse-pic.png" />
+    <meta property="og:image" content="https://rampver.sirv.com/fund-images/pdyf-pic.png" />
     <meta property="og:site_name" content="Rampver Financials" />
     <meta property="og:type" content="article" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -22,7 +26,7 @@
     <link rel="stylesheet" src="../styles/style.css" href="../styles/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
     <link rel="icon" href="../img/favicon.png" type="image/png" sizes="16x20" />
-    <title>Investor Risk Profile Quiz</title>
+    <title>Investment Projection Calculator</title>
     <!-- Google Tag Manager -->
     <script>
         (function (w, d, s, l, i) {
@@ -42,15 +46,14 @@
     <!-- End Google Tag Manager -->
 </head>
 
-<body data-instant-intensity="viewport">
+<body data-instant-intensity="viewport" onload="showModal()">
     <!-- navbar -->
     <div id="navbarSet"></div>
     <script src="../components/navbar.js"></script>
     <!-- navbar -->
     <br>
     <div class="container">
-        <h5 class="claimHeader text-center mb-3">Investment Projection Calculator</h5>
-
+        <h4 class="claimHeader text-center mb-3">Investment Projection Calculator</h4>
         <div class="mx-auto ">
             <!-- social share addthis -->
             <div class="addthis_inline_share_toolbox_vxvg mt-3  text-center mb-3"></div>
@@ -59,8 +62,9 @@
             <!-- social share addthis -->
             <div class="px-1 mx-auto" style="max-width: 500px;">
 
+                <hr>
                 <!-- chart area -->
-                <div class="text-center">
+                <div class="text-center mt-2">
                     <h6>Projected Investment Value*</h6>
                     <h4 class="claimHeader h3" id="future_balance">?</h4>
                     <br>
@@ -70,7 +74,7 @@
                 <br>
 
                 <div class="mx-auto mb-3">
-                    <div class="form-group">
+                    <div class="form-group px-3">
                         <p for="initial_deposit" class="text-center mb-1">Initial Investment</p>
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -86,7 +90,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group px-3">
                         <p for="contribution_amount" class="text-center mb-1">Additional Investment</p>
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -122,7 +126,9 @@
                             value="1">Annually</label>
                 </div>
                 <div class="form-group text-center">
-                    <label for="contribution_period">What is your risk profile?</label>
+                    <label for="contribution_period" data-toggle="tooltip" data-placement="top"
+                        title="The level of investment risk you are willing to take.">What is your risk profile?
+                        ⓘ</label>
                     <br>
                     <div></div>
                     <label class="form-check-label rfbtn text-white btn btn-sm border"
@@ -139,35 +145,78 @@
                 </div>
 
                 <div class="form-group px-4 mt-4" id="slidecontainer">
-                    <p for="investment_timespan" class="text-center mb-2">Number of Years Invested</p>
+                    <p for="investment_timespan" class="text-center mb-2">How long do you plan to invest?</p>
                     <h5 id="investment_timespan_text" class="claimHeader text-center">5 years</h5>
                     <input class="form-control slider mt-3 px-0" id="investment_timespan" type="range"
                         name="investment_timespan" min="1" max="50" step="1" value="5">
 
                 </div>
 
-                <!-- <div class="form-group">
-                    <label for="estimated_return">Projected Yield per Annum (%)</label>
+                <br>
+                <!-- share via QR Code -->
+                <div id="shareQR" class="text-center mt-2"></div>
+                <script src="../components/shareQR.js"></script>
+                <!-- share via QR Code -->
+                <br>
 
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <button class="btn btn-primary" type="button" data-counter="sub"
-                                data-field="estimated_return">&minus;</button>
-                        </div>
-                        <input class="form-control text-center" id="estimated_return" type="text"
-                            name="estimated_return" min="0" max="50" step="0.25" value="5.00%" data-value="5.00"
-                            data-append="%">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" type="button" data-counter="add"
-                                data-field="estimated_return">&plus;</button>
-                        </div>
+                <div class="card rounded">
+                    <div class="card-body">
+                        <h6 class="card-subtitle mb-2 text-muted ">*Disclaimer</h6>
+                        <hr>
+                        <p class="card-text text-muted text-justify mb-1"><small>
+                                1. This serves only as a projection and does not serve as proof of any investment
+                                guarantee. </small>
+                        </p>
+                        <p class="card-text text-muted text-justify mb-1"><small>2. Return of investment rates are based
+                                on average
+                                past mutual
+                                fund performance. Aggressive is pegged at
+                                15% p.a., Moderate at 10% p.a., and Conservative at 5% p.a. <a
+                                    href="../risk-profiler/quiz.html">Know your
+                                    profile here.</a></small>
+                        </p>
+                        <p class="card-text text-muted text-justify mb-1"><small> 3. This assumes that all investments
+                                made
+                                are
+                                under the
+                                zero
+                                front-end load scheme (no
+                                sales load deduction applied). </small>
+                        </p>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
     </div>
     </div>
+    <br>
 
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="claimHeader text-left">Welcome!</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <!-- <h4 class="modal-title">Modal Header</h4> -->
+                </div>
+                <div class="modal-body">
+                    <p class="text-justify">This is a simple projection tool made to assist you in planning and
+                        visualizing your investing
+                        journey based on your budget and risk profile to help you choose the mutual fund that best suit
+                        your needs.</p>
+                    <p class="text-justify">This does not serve as proof of any
+                        investment
+                        guarantee.</p>
+                </div>
+                <div class="mx-auto">
+                    <button type="button" class="btn btn-lr rfbtn text-white px-4"
+                        data-dismiss="modal">Continue</button>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
 
     <!-- footer -->
     <div id="footer"></div>
@@ -182,10 +231,8 @@
 
     <!-- chart js -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js'></script>
-    <script src="./script.js"></script>
+    <script src="./calculate.js"></script>
     <!-- chart js -->
-
-
 
     <!-- Facebook Messenger -->
     <!-- Load Facebook SDK for JavaScript -->
@@ -230,6 +277,7 @@
     <script src="https://kit.fontawesome.com/b2291eba76.js"></script>
     <script src="//instant.page/3.0.0" type="module" defer
         integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
     <script>
         $(function () {
             var $radioButtons = $('input[type="radio"]');
@@ -240,7 +288,19 @@
             });
         });
     </script>
-
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <script>
+        // $(window).load(function () {
+        //     $('#myModal').modal('show');
+        // });
+        function showModal() {
+            $('#myModal').modal('show');
+        }
+    </script>
 
 </body>
 
