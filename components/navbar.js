@@ -36,15 +36,11 @@ navbar.innerHTML = `
 						<li class="nav-item">
 								<a class="nav-link" href="../risk-profiler/quiz.html">Take the Quiz!</a>
 						</li>
-
+						<li class="nav-item">
+								<a class="nav-link" href="../graph/projector.html">Projection Tool</a>
+						</li>
 						<li class="nav-item">
 								<a class="nav-link" href="https://rampver.com/seedbox/" target="_blank">Seedbox</a>
-						</li>
-						<li class="nav-item">
-								<a class="nav-link" href="https://rampver.com/contact-us/" target="_blank">Contact Us</a>
-						</li>
-						<li class="nav-item">
-								<a class="nav-link" href="https://rampver.com/privacy/" target="_blank">Privacy</a>
 						</li>
 				</ul>
 		</div>
