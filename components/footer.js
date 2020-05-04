@@ -6,6 +6,7 @@ const foot = document.createElement('footer');
 //create component
 foot.innerHTML = `
 <p class="text-white text-center">Rampver Financials &copy; 2020</p>
+
 	`;
 
 //append component to host page

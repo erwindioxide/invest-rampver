@@ -33,7 +33,8 @@
 
     function getChartData() {
         var P = parseFloat(initial_deposit.dataset.value), // Principal
-            r = parseFloat(estimated_return.dataset.value / 100), // Annual Interest Rate
+            // r = parseFloat(estimated_return.dataset.value / 100), // Annual Interest Rate
+            r = parseFloat(document.querySelector('[name="estimated_return"]:checked').value), // Annual Interest Rate
             c = parseFloat(contribution_amount.dataset.value), // Contribution Amount
             n = 1, //compounded annual
             // sl = document.querySelector('[name="sales_load"]:checked').value, // Contribution Period
@@ -112,9 +113,9 @@
     });
 
 
-    estimated_return.addEventListener('change', function () {
-        updateValue(this);
-    });
+    // estimated_return.addEventListener('change', function () {
+    //     updateValue(this);
+    // });
 
     investment_timespan.addEventListener('change', function () {
         investment_timespan_text.innerHTML = this.value + ' years';
@@ -125,7 +126,7 @@
         investment_timespan_text.innerHTML = this.value + ' years';
     });
 
-    var radios = document.querySelectorAll('[name="contribution_period"], [name="compound_period"], [name="sales_load"]');
+    var radios = document.querySelectorAll('[name="contribution_period"], [name="compound_period"], [name="sales_load"], [name="estimated_return"]');
     for (var j = 0; j < radios.length; j++) {
         radios[j].addEventListener('change', updateChart);
     }
@@ -178,7 +179,7 @@
                         stacked: true,
                         ticks: {
                             callback: function (value) {
-                                return 'P' + value.toLocaleString();
+                                return '₱' + value.toLocaleString();
                             }
                         },
                         scaleLabel: {

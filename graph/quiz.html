@@ -51,7 +51,7 @@
     <div class="container">
         <h5 class="claimHeader text-center mb-3">Investment Projection Calculator</h5>
 
-        <div class="mx-auto">
+        <div class="mx-auto ">
             <!-- social share addthis -->
             <div class="addthis_inline_share_toolbox_vxvg mt-3  text-center mb-3"></div>
             <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e108780a32cd784">
@@ -69,7 +69,7 @@
                 <!-- chart area -->
                 <br>
 
-                <div class="mx-auto">
+                <div class="mx-auto mb-3">
                     <div class="form-group">
                         <p for="initial_deposit" class="text-center mb-1">Initial Investment</p>
                         <div class="input-group">
@@ -86,7 +86,6 @@
                             </div>
                         </div>
                     </div>
-                    <br>
                     <div class="form-group">
                         <p for="contribution_amount" class="text-center mb-1">Additional Investment</p>
                         <div class="input-group">
@@ -105,36 +104,49 @@
                     </div>
                 </div>
 
-                <br>
-
                 <div class="form-group text-center">
                     <label for="contribution_period">How often will you add?</label>
                     <br>
-                    <label class="form-check-label rfbtn text-white btn border" for="contribution_period_monthly"><input
-                            class="form-check-input invisible" id="contribution_period_monthly" type="radio"
-                            name="contribution_period" value="12" checked>Monthly</label>
-                    <label class="form-check-label btn border  ml-2" for="contribution_period_quarterly"><input
-                            class="form-check-input invisible" id="contribution_period_quarterly" type="radio"
-                            name="contribution_period" value="4">Quarterly</label>
-                    <label class="form-check-label btn border ml-2" for="contribution_period_annually"><input
-                            class="form-check-input invisible" id="contribution_period_annually" type="radio"
-                            name="contribution_period" value="1">Annually</label>
-                    <!-- <label class="form-check-label btn border px-4 ml-3" for="contribution_period_none"><input
-                            class="form-check-input invisible" id="contribution_period_none" type="radio"
-                            name="contribution_period" value="0">None</label> -->
+                    <div></div>
+                    <label class="form-check-label rfbtn text-white btn btn-sm border px-3"
+                        for="contribution_period_monthly"><input class="form-check-input invisible"
+                            id="contribution_period_monthly" type="radio" name="contribution_period" value="12"
+                            checked>Monthly</label>
+                    <label class="form-check-label btn border btn-sm px-3 ml-2"
+                        for="contribution_period_quarterly"><input class="form-check-input invisible"
+                            id="contribution_period_quarterly" type="radio" name="contribution_period"
+                            value="4">Quarterly</label>
+                    <label class="form-check-label btn border btn-sm px-3 ml-2"
+                        for="contribution_period_annually"><input class="form-check-input invisible"
+                            id="contribution_period_annually" type="radio" name="contribution_period"
+                            value="1">Annually</label>
+                </div>
+                <div class="form-group text-center">
+                    <label for="contribution_period">What is your risk profile?</label>
+                    <br>
+                    <div></div>
+                    <label class="form-check-label rfbtn text-white btn btn-sm border"
+                        for="estimated_return_aggressive"><input class="form-check-input invisible"
+                            id="estimated_return_aggressive" type="radio" name="estimated_return" value="0.15"
+                            checked>Aggressive</label>
+                    <label class="form-check-label btn border btn-sm ml-2" for="estimated_return_moderate"><input
+                            class="form-check-input invisible" id="estimated_return_moderate" type="radio"
+                            name="estimated_return" value="0.10">Moderate</label>
+                    <label class="form-check-label btn border btn-sm ml-2" for="estimated_return_conservative"><input
+                            class="form-check-input invisible" id="estimated_return_conservative" type="radio"
+                            name="estimated_return" value="0.05">Conservative</label>
+
                 </div>
 
-                <br>
-
-                <div class="form-group" id="slidecontainer">
-                    <p for="investment_timespan" class="text-center">Number of Years Invested</p>
+                <div class="form-group px-4 mt-4" id="slidecontainer">
+                    <p for="investment_timespan" class="text-center mb-2">Number of Years Invested</p>
                     <h5 id="investment_timespan_text" class="claimHeader text-center">5 years</h5>
                     <input class="form-control slider mt-3 px-0" id="investment_timespan" type="range"
                         name="investment_timespan" min="1" max="50" step="1" value="5">
 
                 </div>
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="estimated_return">Projected Yield per Annum (%)</label>
 
                     <div class="input-group">
@@ -150,9 +162,10 @@
                                 data-field="estimated_return">&plus;</button>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
+    </div>
     </div>
 
 
