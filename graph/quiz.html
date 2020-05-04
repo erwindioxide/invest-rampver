@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#124735" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="title" content="Know your Investor Risk Profile!" />
+    <meta name="description" content="This is a simple assessment tool to assist you in determining your investing
+    style and risk tolerance level and to help you choose the mutual fund that suit
+    your profile. The evaluation is based on your current profile and for reference only. " />
+    <meta property="og:title" content="Know your Investor Risk Profile today!" />
+    <meta property="og:description" content="Find your risk profile and discover the right fund for you!" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="https://rampver.sirv.com/fund-images/ppse-pic.png" />
+    <meta property="og:site_name" content="Rampver Financials" />
+    <meta property="og:type" content="article" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" src="../styles/style.css" href="../styles/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <link rel="icon" href="../img/favicon.png" type="image/png" sizes="16x20" />
+    <title>Investor Risk Profile Quiz</title>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PG4287G');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body data-instant-intensity="viewport">
+    <!-- navbar -->
+    <div id="navbarSet"></div>
+    <script src="../components/navbar.js"></script>
+    <!-- navbar -->
+    <br>
+    <div class="container">
+        <h5 class="claimHeader text-center mb-3">Investment Projection Calculator</h5>
+
+        <div class="mx-auto">
+            <!-- social share addthis -->
+            <div class="addthis_inline_share_toolbox_vxvg mt-3  text-center mb-3"></div>
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e108780a32cd784">
+            </script>
+            <!-- social share addthis -->
+            <div class="px-1 mx-auto" style="max-width: 500px;">
+
+                <!-- chart area -->
+                <div class="text-center">
+                    <h6>Projected Investment Value*</h6>
+                    <h4 class="claimHeader h3" id="future_balance">?</h4>
+                    <br>
+                    <canvas id="myChart"></canvas>
+                </div>
+                <!-- chart area -->
+                <br>
+
+                <div class="mx-auto">
+                    <div class="form-group">
+                        <p for="initial_deposit" class="text-center mb-1">Initial Investment</p>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <button class="btn rfbtn text-white" type="button" data-counter="sub"
+                                    data-field="initial_deposit">&minus;</button>
+                            </div>
+                            <input class="form-control text-center" id="initial_deposit" type="text"
+                                name="initial_deposit" min="1000" max="100000000" step="1000" value="₱1000"
+                                data-value="1000" data-prepend="₱">
+                            <div class="input-group-append">
+                                <button class="btn rfbtn text-white" type="button" data-counter="add"
+                                    data-field="initial_deposit">&plus;</button>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <p for="contribution_amount" class="text-center mb-1">Additional Investment</p>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <button class="btn rfbtn text-white" type="button" data-counter="sub"
+                                    data-field="contribution_amount">&minus;</button>
+                            </div>
+                            <input class="form-control text-center" id="contribution_amount" type="text"
+                                name="contribution_amount" min="0" max="10000000" step="500" value="₱500"
+                                data-value="500" data-prepend="₱">
+                            <div class="input-group-append">
+                                <button class="btn rfbtn text-white" type="button" data-counter="add"
+                                    data-field="contribution_amount">&plus;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="form-group text-center">
+                    <label for="contribution_period">How often will you add?</label>
+                    <br>
+                    <label class="form-check-label rfbtn text-white btn border" for="contribution_period_monthly"><input
+                            class="form-check-input invisible" id="contribution_period_monthly" type="radio"
+                            name="contribution_period" value="12" checked>Monthly</label>
+                    <label class="form-check-label btn border  ml-2" for="contribution_period_quarterly"><input
+                            class="form-check-input invisible" id="contribution_period_quarterly" type="radio"
+                            name="contribution_period" value="4">Quarterly</label>
+                    <label class="form-check-label btn border ml-2" for="contribution_period_annually"><input
+                            class="form-check-input invisible" id="contribution_period_annually" type="radio"
+                            name="contribution_period" value="1">Annually</label>
+                    <!-- <label class="form-check-label btn border px-4 ml-3" for="contribution_period_none"><input
+                            class="form-check-input invisible" id="contribution_period_none" type="radio"
+                            name="contribution_period" value="0">None</label> -->
+                </div>
+
+                <br>
+
+                <div class="form-group" id="slidecontainer">
+                    <p for="investment_timespan" class="text-center">Number of Years Invested</p>
+                    <h5 id="investment_timespan_text" class="claimHeader text-center">5 years</h5>
+                    <input class="form-control slider mt-3 px-0" id="investment_timespan" type="range"
+                        name="investment_timespan" min="1" max="50" step="1" value="5">
+
+                </div>
+
+                <div class="form-group">
+                    <label for="estimated_return">Projected Yield per Annum (%)</label>
+
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-primary" type="button" data-counter="sub"
+                                data-field="estimated_return">&minus;</button>
+                        </div>
+                        <input class="form-control text-center" id="estimated_return" type="text"
+                            name="estimated_return" min="0" max="50" step="0.25" value="5.00%" data-value="5.00"
+                            data-append="%">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button" data-counter="add"
+                                data-field="estimated_return">&plus;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <div id="footer"></div>
+    <script src="../components/footer.js"></script>
+    <!-- footer -->
+
+    <!-- cookie consent -->
+    <div id="cookieconsent"></div>
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    <script src="../js/cookieconsent.js"></script>
+    <!-- cookie consent -->
+
+    <!-- chart js -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js'></script>
+    <script src="./script.js"></script>
+    <!-- chart js -->
+
+
+
+    <!-- Facebook Messenger -->
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v5.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js,
+                fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        })(document, 'script', 'facebook-jssdk');
+    </script>
+
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution="setup_tool" page_id="355427532453" theme_color="#256141"
+        logged_in_greeting="We're here to help you! :D" logged_out_greeting="We're here to help you! :D"></div>
+    <!-- Facebook Messenger -->
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PG4287G" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/b2291eba76.js"></script>
+    <script src="//instant.page/3.0.0" type="module" defer
+        integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+    <script>
+        $(function () {
+            var $radioButtons = $('input[type="radio"]');
+            $radioButtons.click(function () {
+                $radioButtons.each(function () {
+                    $(this).parent().toggleClass('rfbtn text-white', this.checked);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
