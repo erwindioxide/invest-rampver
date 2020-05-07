@@ -4,7 +4,7 @@ const genInqLink = document.createElement('div');
 // create the sticky btn and modal component
 genInqLink.innerHTML = `
 <div class="text-center">
-<a href="" class="mx-auto btn rfbtn text-white my-2" data-toggle="modal" data-target="#inquireform">Start Investing!</a>
+<a href="" class="mx-auto btn btn-lg rfbtn text-white my-3" data-toggle="modal" data-target="#inquireform">Start Investing!</a>
 </div>
   <div class="modal fade" id="inquireform" role="dialog">
   <div class="modal-dialog" role="document">
