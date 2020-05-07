@@ -1,14 +1,11 @@
 // create component parent div
-const genInq = document.createElement('div');
-
-// set component class
-genInq.className = 'btn text-left';
+const genInqLink = document.createElement('div');
 
 // create the sticky btn and modal component
-genInq.innerHTML = `
-  <button id="sticky" class="btn rfbtn text-white mt-3 btn-lg" data-toggle="modal" data-target="#inquireform">
-  Start Investing!
-  </button>
+genInqLink.innerHTML = `
+<div class="text-center">
+<a href="" class="mx-auto btn rfbtn text-white my-2" data-toggle="modal" data-target="#inquireform">Start Investing!</a>
+</div>
   <div class="modal fade" id="inquireform" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -141,11 +138,11 @@ genInq.innerHTML = `
   `;
 
 //append component to host page
-document.getElementById('genInqBtn').appendChild(genInq);
+document.getElementById('genInqLink').appendChild(genInqLink);
 
 function submitDetails() {
-  document.getElementById('pulse-load').classList.remove('d-none');
-  setTimeout(function submitDetails() {
-    document.getElementById('pulse-load').classList.add('d-none');
-  }, 15000);
+	document.getElementById('pulse-load').classList.remove('d-none');
+	setTimeout(function submitDetails() {
+		document.getElementById('pulse-load').classList.add('d-none');
+	}, 15000);
 }
