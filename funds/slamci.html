@@ -32,6 +32,15 @@
         Sun Life Asset Management Company, Inc. (SLAMCI) Mutual Funds
     </title>
 
+    <script>
+        let key = window.location.href.split('/').pop().replace('.html', '');
+        api = 'https://v2-api.sheety.co/rampverfinancials/mfapi/' + key;
+        let x = "data." + key
+        fetch(api)
+            .then(response => response.json())
+            .then(data => console.log(eval(x)));
+    </script>
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
     </script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -295,7 +304,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-    <script src="https://kit.fontawesome.com/b2291eba76.js"></script>
     <script src="//instant.page/3.0.0" type="module" defer
         integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
 </body>

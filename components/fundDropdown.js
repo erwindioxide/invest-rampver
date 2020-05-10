@@ -13,7 +13,7 @@ fundDropdown.innerHTML = `
 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 		<a class="dropdown-item" href="../funds/recommended.html">✔️ Rampver's Recommended Funds</a>
 		<a class="dropdown-item" href="../funds/all.html">All Mutual Funds</a>
-		<a class="dropdown-item" href="../funds/indexfunds.html">Index Funds</a>
+		<a class="dropdown-item" href="../funds/index.html">Index Funds</a>
 		<a class="dropdown-item" href="../funds/dollar.html">Dollar Funds</a>
 		<hr />
 		<small class="dropdown-item text-secondary font-italic">By Investor Risk Profile</small>
