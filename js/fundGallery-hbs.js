@@ -16,7 +16,7 @@ $(document).ready(function () {
 		}
 	);
 
-	$.ajax("../templates/item-template.html").done(function (fundGallery) {
+	$.ajax("../templates/item-template.hbs").done(function (fundGallery) {
 		$("body").append(fundGallery);
 		Handlebars.registerPartial("fundGallery", $("#item-template").html());
 	});

@@ -48,13 +48,12 @@
 							<th class="claimHeader text-right">YTD Return</th>
 						</tr>
 						{{#each this}}
-
 						<h6 class="claimHeader mb-3 font-italic">{{date}}</h6>
 						<small class="text-secondary" id="historicalNote"></small>
             <tr>
 							<td class="claimHeader"><small><a href="{{url}}#navChart" class="claimHeader">{{fundname}}</a></small></td>
 							<td class="text-right"><small>{{navps}}</small></td>
-							<td class="text-right ytd"><small>{{ytd}}</small></td>
+							<td class="text-right"><p class="ytd"><small>{{ytd}}</small></p></td>
 						</tr>
 						{{/each}}
 					</table>
@@ -98,7 +97,6 @@
 		<!-- dropdown -->
 		<!-- info block -->
 
-
 		<!-- social share addthis -->
 		<div class="addthis_inline_share_toolbox_vxvg mt-3"></div>
 		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e108780a32cd784">
@@ -117,7 +115,6 @@
 			onclick="Calendly.initPopupWidget({url: 'https://calendly.com/rampver/schedule-appointment'});return false;">Schedule
 			a Call</a>
 		<!-- Calendly link widget end -->
-
 
 		<div id="navps">
 			<div style="margin:auto">

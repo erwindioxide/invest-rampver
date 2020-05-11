@@ -1,11 +1,11 @@
 setTimeout(function (colors) {
-    let tag = document.querySelectorAll('.indiv-tag');
     let typelink = document.querySelectorAll('.typelink');
+    let tag = document.querySelectorAll('.indiv-tag');
     typelink.forEach(function (el) {
         if (el.innerHTML == 'Equity Fund') {
             el.setAttribute('href', '../funds/aggressive.html');
         } else if (el.innerHTML == 'Equity Index Fund') {
-            el.setAttribute('href', '../funds/indexfunds.html');
+            el.setAttribute('href', '../funds/index.html');
         } else if (el.innerHTML == 'Balanced Fund') {
             el.setAttribute('href', '../funds/moderate.html');
         } else if (el.innerHTML == 'Unitized Balanced Fund') {
@@ -30,7 +30,7 @@ setTimeout(function (colors) {
             element.innerHTML = 'Dollar';
         } else {
             element.classList.add('d-none');
-            element.innerHTML = 'Unknown';
+            element.innerHTML = "";
         }
     });
 }, 3500);

@@ -1,7 +1,6 @@
 setTimeout(function (elements) {
 	let ytd = document.querySelectorAll('.ytd');
-	// console.log(ytd)
-
+	console.log(ytd)
 	ytd.forEach(function (element) {
 		if (element.innerHTML > 0) {
 			element.classList.add('text-rampver');
