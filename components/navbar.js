@@ -31,13 +31,16 @@ navbar.innerHTML = `
 								<a class="nav-link" href="../support/daily-navps.html">NAVPS</a>
 						</li>
 						<li class="nav-item">
-								<a class="nav-link" href="../support/forms.html">Forms and Guidelines</a>
+								<a class="nav-link" href="../support/forms.html">Forms</a>
 						</li>
 						<li class="nav-item">
 								<a class="nav-link" href="../risk-profiler/quiz.html">Take the Quiz!</a>
 						</li>
 						<li class="nav-item">
 								<a class="nav-link" href="../graph/projector.html">Projection Tool</a>
+						</li>
+						<li class="nav-item">
+								<a class="nav-link" href="../inquire/mutual-funds.html?id=1">Inquire now!</a>
 						</li>
 						<li class="nav-item">
 								<a class="nav-link" href="https://rampver.com/seedbox/" target="_blank">Seedbox</a>
