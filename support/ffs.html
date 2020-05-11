@@ -15,19 +15,12 @@
 	<meta property="og:image" content="https://rampver.sirv.com/fund-images/ppse-pic.png" />
 	<meta property="og:site_name" content="Rampver Financials" />
 	<meta property="og:type" content="article" />
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-	<link rel="stylesheet" src="../styles/style.css" href="../styles/style.css" />
-	<link rel="stylesheet" type="text/css"
-		href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-	<link rel="icon" href="../img/favicon.png" type="image/png" sizes="16x20" />
-
 	<title>Fund Fact Sheets and Prospectus</title>
-
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
-	</script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+	<link rel="icon" href="../img/favicon.png" type="image/png" sizes="16x20" />
+	<link rel="stylesheet" href="../dependencies/bootstrap.min.css" />
+	<link rel="stylesheet" src="../styles/style.css" href="../styles/style.css" />
+	<script type="text/javascript" src="../dependencies/handlebars.min.js"></script>
+	<script type="text/javascript" src="../dependencies/jquery.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function () {
 			$.getJSON(
@@ -44,25 +37,20 @@
 			<h3 class="claimHeader mb-3">Latest Fund Fact Sheets and Fund Prospectus</h3>
 						<tr>
 							<th class="claimHeader">Mutual Fund Name</th>
-							<th class="claimHeader">Fund Prospectus</th>
-							<th class="claimHeader">Latest Fund Fact Sheet</th>
+							<th class="claimHeader text-center">Fund Prospectus</th>
+							<th class="claimHeader text-center">Latest Fund Fact Sheet</th>
 						</tr>
 						{{#each this}}
-
 						<small class="text-secondary" id="historicalNote"></small>
             <tr>
 							<td class="claimHeader"><small><a href="{{url}}" class="claimHeader">{{fundname}}</a></small></td>
-							<td><a href="{{prospectuslink}}" class="btn btn-sm rfbtn text-white">Prospectus</a></td>
-							<td><a href="{{ffslink}}" class="btn btn-sm rfbtn text-white">Fund Fact Sheet</a></td>
+							<td class="text-center"><a href="{{prospectuslink}}" class="btn btn-sm rfbtn text-white">Prospectus</a></td>
+							<td class="text-center"><a href="{{ffslink}}" class="btn btn-sm rfbtn text-white">Fund Fact Sheet</a></td>
 						</tr>
-
-
 						{{/each}}
-						
 					</table>
 					<small class="font-italic text-secondary">* Past perfomance is not a guarantee of future returns.</small>
 					<br>
-
     </script>
 
 	<!-- Google Tag Manager -->
@@ -108,13 +96,12 @@
 		<script src="../components/shareQR.js"></script>
 		<!-- share via QR Code -->
 		<!-- Calendly link widget begin -->
-		<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-		<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+		<link href="../dependencies/calendly_widget.css" rel="stylesheet">
+		<script src="../dependencies/calendly_widget.js"></script>
 		<a href="" class="btn btn-sm rfbtn text-white mb-3"
 			onclick="Calendly.initPopupWidget({url: 'https://calendly.com/rampver/schedule-appointment'});return false;">Schedule
 			a Call</a>
 		<!-- Calendly link widget end -->
-
 
 		<div id="funddocs">
 			<div style="margin:auto">
@@ -128,7 +115,6 @@
 				<br />
 			</div>
 		</div>
-
 	</div>
 	<br />
 
@@ -164,23 +150,19 @@
 
 	<!-- cookie consent -->
 	<div id="cookieconsent"></div>
-	<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+	<link rel="stylesheet" href="../dependencies/cookieconsent.min.css" />
+	<script src="../dependencies/cookieconsent.min.js"></script>
 	<script src="../js/cookieconsent.js"></script>
 	<!-- cookie consent -->
 
-	<!-- Go to www.addthis.com/dashboard to customize your tools -->
-	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e108780a32cd784"></script>
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PG4287G" height="0" width="0"
 			style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+	<script src="../dependencies/popper.min.js">
 	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+	<script src="../dependencies/bootstrap.min.js">
 	</script>
-	<script src="https://kit.fontawesome.com/b2291eba76.js"></script>
 	<script src="//instant.page/3.0.0" type="module" defer
 		integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
 </body>

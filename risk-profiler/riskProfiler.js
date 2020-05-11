@@ -30,7 +30,7 @@ function getsum() {
 	} else if (sum == 9 || sum <= 16) {
 		window.location.href = "./conservative.html?points=" + sum
 	} else if (sum > 17 || sum < 22) {
-		window.location.href = "./moderately-aggressive.html?points=" + sum
+		window.location.href = "./moderate.html?points=" + sum
 	} else {
 		window.location.reload;
 	}

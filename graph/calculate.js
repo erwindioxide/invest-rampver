@@ -192,3 +192,25 @@
         });
 
 })();
+
+//Code Added by ECB
+
+// Toggle Button Color on click
+$(function () {
+    var $radioButtons = $('input[type="radio"]');
+    $radioButtons.click(function () {
+        $radioButtons.each(function () {
+            $(this).parent().toggleClass('rfbtn text-white', this.checked);
+        });
+    });
+});
+
+// Tooltip
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+});
+
+//showmodal
+function showModal() {
+    $('#myModal').modal('show');
+}
