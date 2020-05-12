@@ -6,7 +6,7 @@ genInq.className = 'btn text-left';
 
 // create the sticky btn and modal component
 genInq.innerHTML = `
-  <button id="sticky" class="btn rfbtn text-white mt-3 btn-lg" data-toggle="modal" data-target="#inquireform">
+  <button id="sticky" class="btn rfbtn text-white mt-3 btn-lg sticky" data-toggle="modal" data-target="#inquireform">
   Start Investing!
   </button>
   <div class="modal fade" id="inquireform" role="dialog">

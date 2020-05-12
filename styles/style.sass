@@ -1,13 +1,18 @@
 @font-face
-	font-family: "GoogleSans-Regular"
-	src: url("../fonts/GoogleSans-Regular.woff") format("woff")
+	font-family: "Lato Regular"
+	src: url("../fonts/Lato_Regular.woff") format("woff")
+
+@font-face
+	font-family: "Google Sans Regular", sans-serif
+	src: url("../fonts/GoogleSans-Regular") format("woff")
 
 html, body
 	padding: 0 !important
 	margin: 0 !important
 	width: 100% !important
 	box-sizing: border-box
-	font-family: "GoogleSans-Regular", sans-serif
+	font-family: "Lato Regular"
+	src: url("../fonts/Lato_Regular.woff") format("woff")
 	scroll-behavior: smooth
 
 .navbar
@@ -34,7 +39,7 @@ html, body
 
 .rfbtn
 	background-color: #256141
-	font-color: white
+	font-color: white !important
 	border: 0
 
 .claimHeader
@@ -66,12 +71,11 @@ html, body
 .leftAlign
 	text-align: left !important
 
-
 .fundcards
 	z-index: 5
 
 #cookieconsent
-	font-family: "GoogleSans-Regular", sans-serif !important
+	font-family: "Lato Regular", sans-serif !important
 	size: 50%
 	margin-right: 0 !important
 
@@ -103,15 +107,12 @@ html, body
 	.form-container
 		width: 400px !important
 
-	
 @media (min-width:500px)
 	.form-container
 		width: 500px !important
 
 .text-rampver
 	color: #256141
-
-
 
 .ais-SearchBox-input
 	display: block
@@ -140,7 +141,6 @@ html, body
 	min-width: 0
 	word-wrap: break-word
 
-
 .highcharts-credits
 	display: none
 
@@ -149,7 +149,7 @@ html, body
 	color: #256141 !important
 
 .highcharts-title, .highcharts-range-selector, .highcharts-range-selector-group, .highcharts-input-group, .highcharts-xaxis-labels, .highcharts-yaxis-labels
-	font-family:  "GoogleSans-Regular", sans-serif !important
+	font-family:  "Lato Regular", sans-serif !important
 
 .highcharts-a11y-proxy-button
 	color: #256141
@@ -191,11 +191,10 @@ footer
 		margin-bottom: 0px
 		color: #ffffff !important
 
-
 .slidecontainer
 	width: 100%
 
-.slider 
+.slider
 	-webkit-appearance: none
 	width: 100%
 	height: 15px
@@ -203,9 +202,6 @@ footer
 	background: #d3d3d3
 	outline: none
 	opacity: 1
-	// -webkit-transition: .2s
-	// transition: opacity .2s
-
 
 .slider::-webkit-slider-thumb
 	-webkit-appearance: none
@@ -216,16 +212,12 @@ footer
 	background: #256141
 	cursor: pointer
 
-.slider::-moz-range-thumb 
+.slider::-moz-range-thumb
 	width: 25px
 	height: 25px
 	border-radius: 50%
 	background: #256141
 	cursor: pointer
-
-
-// .slider:hover 
-// 	opacity: 1
 
 
 

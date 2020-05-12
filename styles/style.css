@@ -1,12 +1,16 @@
 @font-face {
-  font-family: "GoogleSans-Regular";
-  src: url("../fonts/GoogleSans-Regular.woff") format("woff"); }
+  font-family: "Lato Regular";
+  src: url("../fonts/Lato_Regular.woff") format("woff"); }
+@font-face {
+  font-family: "Google Sans Regular", sans-serif;
+  src: url("../fonts/GoogleSans-Regular") format("woff"); }
 html, body {
   padding: 0 !important;
   margin: 0 !important;
   width: 100% !important;
   box-sizing: border-box;
-  font-family: "GoogleSans-Regular", sans-serif;
+  font-family: "Lato Regular";
+  src: url("../fonts/Lato_Regular.woff") format("woff");
   scroll-behavior: smooth; }
 
 .navbar {
@@ -33,7 +37,7 @@ html, body {
 
 .rfbtn {
   background-color: #256141;
-  font-color: white;
+  font-color: white !important;
   border: 0; }
 
 .claimHeader {
@@ -69,7 +73,7 @@ html, body {
   z-index: 5; }
 
 #cookieconsent {
-  font-family: "GoogleSans-Regular", sans-serif !important;
+  font-family: "Lato Regular", sans-serif !important;
   size: 50%;
   margin-right: 0 !important; }
 
@@ -137,7 +141,7 @@ html, body {
   color: #256141 !important; }
 
 .highcharts-title, .highcharts-range-selector, .highcharts-range-selector-group, .highcharts-input-group, .highcharts-xaxis-labels, .highcharts-yaxis-labels {
-  font-family: "GoogleSans-Regular", sans-serif !important; }
+  font-family: "Lato Regular", sans-serif !important; }
 
 .highcharts-a11y-proxy-button {
   color: #256141; }
