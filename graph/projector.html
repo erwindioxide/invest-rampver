@@ -44,7 +44,13 @@
     <!-- End Google Tag Manager -->
 </head>
 
-<body data-instant-intensity="viewport" onload="showModal()">
+<body data-instant-intensity="viewport">
+    <script>
+        //showmodal
+        $(function () {
+            $('#myModal').modal('show');
+        });
+    </script>
     <!-- navbar -->
     <div id="navbarSet"></div>
     <script src="../components/navbar.js"></script>
@@ -130,15 +136,16 @@
                     <br>
                     <div></div>
                     <label class="form-check-label rfbtn text-white btn btn-sm border"
-                        for="estimated_return_aggressive"><input class="form-check-input invisible"
-                            id="estimated_return_aggressive" type="radio" name="estimated_return" value="0.15"
-                            checked>Aggressive</label>
+                        for="estimated_return_aggressive"><input class="form-check-input invisible recoKey"
+                            id="estimated_return_aggressive" type="radio" name="estimated_return" data-name="aggressive"
+                            value="0.15" checked>Aggressive</label>
                     <label class="form-check-label btn border btn-sm ml-2" for="estimated_return_moderate"><input
-                            class="form-check-input invisible" id="estimated_return_moderate" type="radio"
-                            name="estimated_return" value="0.10">Moderate</label>
+                            class="form-check-input invisible recoKey" id="estimated_return_moderate" type="radio"
+                            name="estimated_return" value="0.10" data-name="moderate">Moderate</label>
                     <label class="form-check-label btn border btn-sm ml-2" for="estimated_return_conservative"><input
-                            class="form-check-input invisible" id="estimated_return_conservative" type="radio"
-                            name="estimated_return" value="0.05">Conservative</label>
+                            class="form-check-input invisible recoKey" data-name="conservative"
+                            id="estimated_return_conservative" type="radio" name="estimated_return"
+                            value="0.05">Conservative</label>
                 </div>
                 <div class="form-group px-4 mt-4" id="slidecontainer">
                     <p for="investment_timespan" class="text-center mb-2">How long do you plan to invest?</p>
@@ -231,6 +238,8 @@
     <div id="footer"></div>
     <script src="../components/footer.js"></script>
     <!-- footer -->
+
+
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PG4287G" height="0" width="0"

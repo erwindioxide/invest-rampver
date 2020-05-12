@@ -205,12 +205,8 @@ $(function () {
     });
 });
 
+
 // Tooltip
 $(function () {
     $('[data-toggle="tooltip"]').tooltip();
 });
-
-//showmodal
-function showModal() {
-    $('#myModal').modal('show');
-}

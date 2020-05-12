@@ -24,28 +24,48 @@ navbar.innerHTML = `
 						<li class="nav-item">
 								<a class="nav-link" href="https://rampver.com/why-rampver/">About us</a>
 						</li>
-						<li class="nav-item">
-								<a class="nav-link" href="../">Mutual Funds</a>
-						</li>
-						<li class="nav-item">
-								<a class="nav-link" href="../support/daily-navps.html">NAVPS</a>
-						</li>
-						<li class="nav-item">
-								<a class="nav-link" href="../support/forms.html">Forms</a>
-						</li>
-						<li class="nav-item">
-								<a class="nav-link" href="../risk-profiler/quiz.html">Take the Quiz!</a>
-						</li>
-						<li class="nav-item">
-								<a class="nav-link" href="../graph/projector.html">Projection Tool</a>
-						</li>
+
 						<li class="nav-item">
 								<a class="nav-link" href="../inquire/mutual-funds.html?id=1">Inquire now!</a>
 						</li>
+
 						<li class="nav-item">
-								<a class="nav-link" href="https://rampver.com/seedbox/" target="_blank">Seedbox</a>
+								<a class="nav-link" href="https://rampver.com/seedbox/" target="_blank">Invest Online!</a>
 						</li>
-				</ul>
+
+						<li class="dropdown nav-item">
+						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Mutual Funds<b class="caret"></b></a> 
+						<ul class="dropdown-menu mt-0" style="background-color: #124735; !important; border:none;">
+						<li class="nav-link"><a href="../funds/aggressive.html">For Aggressive Investor</a></li>
+						<li class="nav-link"><a href="../funds/moderate.html">For Moderately-Aggressive Investor</a></li>
+						<li class="nav-link"><a href="../funds/conservative.html">For Conservative Investor</a></li>
+						<li class="nav-link"><a href="../risk-profiler/quiz.html">Discover your Risk Profile</a></li>
+						</ul>
+						</li>
+
+						<li class="dropdown nav-item">
+						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Online Tools<b class="caret"></b></a> 
+						<ul class="dropdown-menu mt-0" style="background-color: #124735; !important; border:none;">
+						<li class="nav-link"><a href="../risk-profiler/quiz.html">Investor Risk Profiler Quiz</a></li>
+						<li class="nav-link"><a href="../graph/projector.html">Investment Projection Tool</a></li>
+						</ul>
+						</li>
+
+						<li class="dropdown nav-item">
+						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Support<b class="caret"></b></a> 
+						<ul class="dropdown-menu" style="background-color: #124735; !important; border:none;">
+						<li class="nav-link"><a href="../support/daily-navps.html">NAVPS</a></li>
+						<li class="nav-link"><a href="../support/forms.html">Forms and Guidelines</a></li>
+						<li class="nav-link"><a href="../support/ffs.html">Fund Fact Sheets</a></li>
+						<li class="nav-link"><a href="../support/scheduler.html">Schedule a Call</a></li>
+						<li class="nav-link"><a href="../support/soa-request.html">SOA Request</a></li>
+						<li class="nav-link"><a href="../support/all-search.html">SOA Request</a></li>
+						</ul>
+						</li>
+
+						<li class="nav-item">
+								<a class="nav-link" href="https://rampver.com/privacy/" target="_blank">Privacy</a>
+						</li>
 		</div>
 </div>
 </nav>

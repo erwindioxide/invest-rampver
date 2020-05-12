@@ -81,22 +81,12 @@ Start Investing!
 														input.</small>
 										</div>
 										<div class="form-group">
-												<label for="rampverclient" class="claimHeader">Are you currently Rampver
-														Financials
-														client?</label>
-												<select name="rampverclient" id="rampverclient" class="form-control">
-														<option value="No">No, I am not a Rampver client, yet.</option>
-														<option value="Yes">Yes, I am a Rampver client.</option>
-														<option value="Not Sure">I am not sure.</option>
-												</select>
-										</div>
-										<div class="form-group">
 												<label for="referral" class="claimHeader">How did you know about Rampver
 														Financials?</label>
 												<select name="referral" id="referral" class="form-control">
 														<option value="--">-</option>
 														<option value="FB/ Social Media">Facebook/ Social Media</option>
-														<option value="IMG">IMG - International Marketimg Group
+														<option value="IMG">IMG - International Marketing Group
 														</option>
 														<option value="Youtube">Youtube Videos</option>
 														<option value="Website">Rampver Website</option>
@@ -112,25 +102,11 @@ Start Investing!
 												</select>
 										</div>
 										<div class="form-group">
-												<label class="claimHeader" for="modeofcontact">What is your preferred mode
-														of contact?
-												</label>
-												<select name="modeofcontact" id="modeofcontact" class="form-control">
-														<option>-</option>
-														<option value="Email">Email</option>
-														<option value="SMS/Text Message">SMS/Text Message</option>
-														<option value="Phone Call">Phone Call</option>
-														<option value="Messenger/Viber/ Whatsapp">Messenger/Viber/ Whatsapp
-														</option>
-														<option value="Personal Meeting">Personal Meeting</option>
-												</select>
-										</div>
-										<div class="form-group">
 												<label class="claimHeader" for="question">Any questions for us?
 												</label>
 												<br />
 												<textarea type="text" name="question" class="form-control" cols="30"
-														rows="5" placeholder="Your Message" id="message"
+														rows="3" placeholder="Your Message" id="message"
 														onkeyup="validatorMessage()"></textarea>
 												<small class="d-none text-danger font-italic" id="errMsgMessage">Invalid
 														input.</small>
@@ -140,8 +116,7 @@ Start Investing!
 														required />
 												<small class="text-secondary font-italic form-check-label" for="consent">
 														I agree to receive regular updates, promotions, and
-														recommendations regarding investments, insurance,
-														healthcare, and personal finance from Rampver
+														recommendations from Rampver
 														Financials. Visit
 														<a href="rampver.com/privacy">rampver.com/privacy</a> for more info.
 												</small>
