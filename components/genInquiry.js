@@ -13,7 +13,7 @@ genInq.innerHTML = `
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header d-flex align-items-center">
-        <h4 class="text-left claimHeader">Start investing in Mutual Funds!</h4>
+        <h5 class="text-left claimHeader">Start investing in Mutual Funds!</h5>
         <h5 class="text-secondary font-weight-bold text-right ml-auto p-2" data-dismiss="modal">
           X
         </h5>
@@ -119,10 +119,9 @@ genInq.innerHTML = `
               <input type="checkbox" class="form-check-input" name="consent" id="consent" required />
               <small class="text-secondary font-italic form-check-label" for="consent">
                 I agree to receive regular updates, promotions, and
-                recommendations regarding investments, insurance,
-                healthcare, and personal finance from Rampver Financials.
+                recommendations from Rampver Financials.
                 Visit
-                <a href="rampver.com/privacy">rampver.com/privacy</a>
+                <a href="https://rampver.com/privacy">rampver.com/privacy</a>
                 for more info.
               </small>
             </div>
