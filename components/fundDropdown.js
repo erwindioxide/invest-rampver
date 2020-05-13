@@ -10,7 +10,7 @@ fundDropdown.innerHTML = `
 		data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		Select Mutual Fund Category
 </button>
-<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="z-index: 10">
 		<a class="dropdown-item" href="../funds/recommended.html">✔️ Rampver's Recommended Funds</a>
 		<a class="dropdown-item" href="../funds/all.html">All Mutual Funds</a>
 		<a class="dropdown-item" href="../funds/index.html">Index Funds</a>

@@ -6,7 +6,7 @@ const navbar = document.createElement('div');
 
 //create component
 navbar.innerHTML = `
-<nav id="navbar" class="navbar navbar-expand-lg navbar-dark" style="z-index: 5;">
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
 <div class="container-fluid d-flex">
 		<div class="navbar-brand" href="#">
 			<a href="../index.html">	<img src="../img/rf-logo.png"/></a>
@@ -33,7 +33,7 @@ navbar.innerHTML = `
 								<a class="nav-link" href="https://rampver.com/seedbox/" target="_blank">Invest Online!</a>
 						</li>
 
-						<li class="dropdown nav-item">
+						<li class="dropdown nav-item" style="z-index: 5;">
 						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Mutual Funds<b class="caret"></b></a>
 						<ul class="dropdown-menu mt-0" style="background-color: #124735; !important; border:none;">
 						<li class="nav-item nav-link"><a href="../funds/aggressive.html">For Aggressive Investor</a></li>
@@ -43,7 +43,7 @@ navbar.innerHTML = `
 						</ul>
 						</li>
 
-						<li class="dropdown nav-item">
+						<li class="dropdown nav-item" style="z-index: 5;">
 						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Online Tools<b class="caret"></b></a>
 						<ul class="dropdown-menu mt-0" style="background-color: #124735; !important; border:none;">
 						<li class="nav-link"><a href="../risk-profiler/quiz.html">Investor Risk Profiler Quiz</a></li>
@@ -51,7 +51,7 @@ navbar.innerHTML = `
 						</ul>
 						</li>
 
-						<li class="dropdown nav-item">
+						<li class="dropdown nav-item" style="z-index: 5;">
 						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Support<b class="caret"></b></a>
 						<ul class="dropdown-menu" style="background-color: #124735; !important; border:none;">
 						<li class="nav-link"><a href="../support/daily-navps.html">NAVPS</a></li>
