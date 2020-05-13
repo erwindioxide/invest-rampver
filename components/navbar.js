@@ -6,7 +6,7 @@ const navbar = document.createElement('div');
 
 //create component
 navbar.innerHTML = `
-<nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark" style="z-index: 5;">
 <div class="container-fluid d-flex">
 		<div class="navbar-brand" href="#">
 			<a href="../index.html">	<img src="../img/rf-logo.png"/></a>
@@ -34,17 +34,17 @@ navbar.innerHTML = `
 						</li>
 
 						<li class="dropdown nav-item">
-						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Mutual Funds<b class="caret"></b></a> 
+						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Mutual Funds<b class="caret"></b></a>
 						<ul class="dropdown-menu mt-0" style="background-color: #124735; !important; border:none;">
-						<li class="nav-link"><a href="../funds/aggressive.html">For Aggressive Investor</a></li>
-						<li class="nav-link"><a href="../funds/moderate.html">For Moderately-Aggressive Investor</a></li>
-						<li class="nav-link"><a href="../funds/conservative.html">For Conservative Investor</a></li>
-						<li class="nav-link"><a href="../risk-profiler/quiz.html">Discover your Risk Profile</a></li>
+						<li class="nav-item nav-link"><a href="../funds/aggressive.html">For Aggressive Investor</a></li>
+						<li class="nav-item nav-link"><a href="../funds/moderate.html">For Moderately-Aggressive Investor</a></li>
+						<li class="nav-item nav-link"><a href="../funds/conservative.html">For Conservative Investor</a></li>
+						<li class="nav-item nav-link"><a href="../risk-profiler/quiz.html">Discover your Risk Profile</a></li>
 						</ul>
 						</li>
 
 						<li class="dropdown nav-item">
-						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Online Tools<b class="caret"></b></a> 
+						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Online Tools<b class="caret"></b></a>
 						<ul class="dropdown-menu mt-0" style="background-color: #124735; !important; border:none;">
 						<li class="nav-link"><a href="../risk-profiler/quiz.html">Investor Risk Profiler Quiz</a></li>
 						<li class="nav-link"><a href="../graph/projector.html">Investment Projection Tool</a></li>
@@ -52,14 +52,14 @@ navbar.innerHTML = `
 						</li>
 
 						<li class="dropdown nav-item">
-						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Support<b class="caret"></b></a> 
+						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Support<b class="caret"></b></a>
 						<ul class="dropdown-menu" style="background-color: #124735; !important; border:none;">
 						<li class="nav-link"><a href="../support/daily-navps.html">NAVPS</a></li>
 						<li class="nav-link"><a href="../support/forms.html">Forms and Guidelines</a></li>
 						<li class="nav-link"><a href="../support/ffs.html">Fund Fact Sheets</a></li>
 						<li class="nav-link"><a href="../support/scheduler.html">Schedule a Call</a></li>
 						<li class="nav-link"><a href="../support/soa-request.html">SOA Request</a></li>
-						<li class="nav-link"><a href="../support/all-search.html">SOA Request</a></li>
+						<li class="nav-link"><a href="../support/all-search.html">Search Fund</a></li>
 						</ul>
 						</li>
 

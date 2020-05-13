@@ -67,7 +67,8 @@
 
 				<!-- FORM PROPER -->
 				<form method="post" id="formTarget" class="px-3">
-					<p class="font-weight-bold claimHeader text-center mb-3">Kindly fill out these fields to know more!</p>
+					<p class="font-weight-bold claimHeader text-center mb-3">Kindly fill out these fields to know more!
+					</p>
 					<hr>
 					<div style="display: none;">
 						<input type="hidden" name="_wpcf7" id="_wpcf7" />
@@ -76,7 +77,9 @@
 						<input type="hidden" name="_wpcf7_unit_tag" id="_wpcf7_unit_tag" />
 						<input type="hidden" name="_wpcf7_container_post" value="0" />
 					</div>
+					<input type="hidden" name="campaignTitleEntry" id="campaignTitleEntry" />
 					<input type="hidden" name="promotedFund" id="promotedFund" />
+					<input type="hidden" name="otherTags" id="otherTags" />
 					<div class="form-group">
 						<label for="salutation" class="claimHeader">Salutation*</label>
 						<select class="form-control" id="salutation" name="salutation" required>
@@ -89,14 +92,14 @@
 					</div>
 					<div class="form-group">
 						<label for="fullname" class="claimHeader">Full Name*</label>
-						<input type="text" class="form-control" name="fullname" required placeholder="Full Name" id="fullname"
-							onkeyup="validatorFN()" />
+						<input type="text" class="form-control" name="fullname" required placeholder="Full Name"
+							id="fullname" onkeyup="validatorFN()" />
 						<small class="d-none text-danger font-italic" id="errMsgFullName">Invalid input.</small>
 					</div>
 					<div class="form-group">
 						<label for="email" class="claimHeader">Email Address*</label>
-						<input type="email" class="form-control" name="email" required placeholder="Email Address" id="email"
-							onkeyup="validatorEmail()" />
+						<input type="email" class="form-control" name="email" required placeholder="Email Address"
+							id="email" onkeyup="validatorEmail()" />
 						<small class="d-none text-danger font-italic" id="errMsgEmail">Invalid input.</small>
 					</div>
 					<div class="form-group">
@@ -156,8 +159,8 @@
 						<label class="claimHeader" for="question">Any questions for us?
 						</label>
 						<br />
-						<textarea type="text" name="question" class="form-control" cols="30" rows="3" placeholder="Your Message"
-							id="message" onkeyup="validatorMessage()"></textarea>
+						<textarea type="text" name="question" class="form-control" cols="30" rows="3"
+							placeholder="Your Message" id="message" onkeyup="validatorMessage()"></textarea>
 						<small class="d-none text-danger font-italic" id="errMsgMessage">Invalid input.</small>
 					</div>
 					<div class="form-check">
@@ -184,7 +187,8 @@
 					<h4 class="claimHeader text-center mb-3">Share the good news!</h4>
 					<!-- social share addthis -->
 					<div class="addthis_inline_share_toolbox_vxvg text-center mb-3"></div>
-					<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e108780a32cd784">
+					<script type="text/javascript"
+						src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e108780a32cd784">
 					</script>
 					<!-- social share addthis -->
 					<!-- share via QR Code -->

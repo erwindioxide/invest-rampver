@@ -27,10 +27,12 @@ function dataFill(json) {
 	document.getElementById('secondBlockTarget').innerHTML = json.mfCampaign.secondBlock;
 	document.getElementById('thirdBlockTarget').innerHTML = json.mfCampaign.thirdBlock;
 	document.getElementById('formTarget').setAttribute('action', json.mfCampaign.formLink);
+	document.getElementById('campaignTitleEntry').value = json.mfCampaign.campaignTitle;
+	document.getElementById('promotedFund').value = json.mfCampaign.promotedFund;
+	document.getElementById('otherTags').value = json.mfCampaign.otherTags;
 	document.getElementById('_wpcf7').value = json.mfCampaign.wpcf7;
 	document.getElementById('_wpcf7_unit_tag').value = json.mfCampaign.wpcf7UnitTag;
 	document.getElementById('_wpcf7_version').value = json.mfCampaign.wpcf7Version;
-	document.getElementById('promotedFund').value = json.mfCampaign.promotedFund;
 }
 
 // fill data
