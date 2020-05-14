@@ -1,9 +1,6 @@
 // create component parent div
 const navbar = document.createElement('div');
 
-// set component class
-// navbar = 'mb-3';
-
 //create component
 navbar.innerHTML = `
 <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
@@ -48,6 +45,14 @@ navbar.innerHTML = `
 						<ul class="dropdown-menu mt-0" style="background-color: #124735; !important; border:none;">
 						<li class="nav-link"><a href="../risk-profiler/quiz.html">Investor Risk Profiler Quiz</a></li>
 						<li class="nav-link"><a href="../graph/projector.html">Investment Projection Tool</a></li>
+						</ul>
+						</li>
+						<li class="dropdown nav-item" style="z-index: 5;">
+						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Learning<b class="caret"></b></a>
+						<ul class="dropdown-menu mt-0" style="background-color: #124735; !important; border:none;">
+						<li class="nav-link"><a href="https://medium.com/rampver-reads" target="_blank">Rampver Reads</a></li>
+						<li class="nav-link"><a href="https://rampver.com/radio" target="_blank">Rampver Radio</a></li>
+						<li class="nav-link"><a href="https://rampver.com/free-ebook" target="_blank">Free Ebook!</a></li>
 						</ul>
 						</li>
 
