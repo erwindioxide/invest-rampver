@@ -128,9 +128,7 @@ function dataFill(json) {
   );
 
   // Highstocks
-  Highcharts.setOptions({
-    colors: ['#256141'],
-  });
+
 
   let chart = Highcharts.stockChart('navChart', {
     navigator: {
@@ -139,6 +137,11 @@ function dataFill(json) {
     data: {
       googleSpreadsheetKey: '1ymjfcHNL645si4rWH5wlLg0oKVPKH7M4IxUwiPTDDQU',
       googleSpreadsheetWorksheet: eval(renderData + '.navchart'),
+    },
+    plotOptions: {
+      line: {
+        color: '#256141'
+      }
     },
     title: {
       text: 'Fund NAVPS History',
@@ -157,8 +160,7 @@ function dataFill(json) {
       },
     },
     rangeSelector: {
-      buttons: [
-        {
+      buttons: [{
           type: 'month',
           count: 1,
           text: '1m',
@@ -206,8 +208,75 @@ function dataFill(json) {
         y: 0,
       },
     },
+    // series: {
+    //   color: '#256141'
+    // }
   });
   // Highstocks
+
+  // Make monochrome colors
+  var pieColors = (function () {
+    var colors = [],
+      base = '#30c191';
+
+    for (i = 0; i < 10; i += 1) {
+      // Start out with a darkened base color (negative brighten), and end
+      // up with a much brighter color
+      colors.push(Highcharts.color(base).brighten((i - 3) / 7).get());
+    }
+    return colors;
+  }());
+
+  // HighChart
+  // Build the chart
+  Highcharts.chart('assetAllocation', {
+    chart: {
+      plotBackgroundColor: null,
+      plotBorderWidth: null,
+      plotShadow: false,
+      type: 'pie'
+    },
+    title: {
+      text: 'Sample Fund Allocation',
+      style: {
+        color: '#256141',
+      }
+    },
+    tooltip: {
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    accessibility: {
+      point: {
+        valueSuffix: '%'
+      }
+    },
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        colors: pieColors,
+        dataLabels: {
+          enabled: false,
+          format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
+          distance: -50,
+          filter: {
+            property: 'percentage',
+            operator: '>',
+            value: 4
+          }
+        },
+        showInLegend: true
+      }
+    },
+    data: {
+      googleSpreadsheetKey: '1RqnsW6uBsF6_hsWGNuSQsPPcXB-GAYSnH8eDmTN7XXw',
+      googleSpreadsheetWorksheet: eval(renderData + '.navchart'),
+      sliced: true
+    }
+
+  });
+  // HighChart
+
 }
 
 // fill data
