@@ -128,8 +128,6 @@ function dataFill(json) {
   );
 
   // Highstocks
-
-
   let chart = Highcharts.stockChart('navChart', {
     navigator: {
       enabled: false,
@@ -208,12 +206,10 @@ function dataFill(json) {
         y: 0,
       },
     },
-    // series: {
-    //   color: '#256141'
-    // }
   });
   // Highstocks
 
+  // HighChart
   // Make monochrome colors
   var pieColors = (function () {
     var colors = [],
@@ -226,8 +222,6 @@ function dataFill(json) {
     }
     return colors;
   }());
-
-  // HighChart
   // Build the chart
   Highcharts.chart('assetAllocation', {
     chart: {
@@ -265,18 +259,24 @@ function dataFill(json) {
             value: 4
           }
         },
-        showInLegend: true
+        showInLegend: true,
+        allowPointSelect: false,
+        point: {
+          events: {
+            legendItemClick: function (e) {
+              e.preventDefault();
+            }
+          }
+        }
       }
     },
     data: {
       googleSpreadsheetKey: '1RqnsW6uBsF6_hsWGNuSQsPPcXB-GAYSnH8eDmTN7XXw',
       googleSpreadsheetWorksheet: eval(renderData + '.navchart'),
       sliced: true
-    }
-
+    },
   });
   // HighChart
-
 }
 
 // fill data
