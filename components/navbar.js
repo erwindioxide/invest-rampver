@@ -52,7 +52,7 @@ navbar.innerHTML = `
 						<ul class="dropdown-menu mt-0" style="background-color: #124735; !important; border:none;">
 						<li class="nav-link"><a href="https://medium.com/rampver-reads" target="_blank">Rampver Reads</a></li>
 						<li class="nav-link"><a href="https://rampver.com/radio" target="_blank">Rampver Radio</a></li>
-						<li class="nav-link"><a href="https://rampver.com/free-ebook" target="_blank">Free Ebook!</a></li>
+						<li class="nav-link"><a href="../inquire/ebook.html?id=1">Free E-Book!</a></li>
 						</ul>
 						</li>
 
