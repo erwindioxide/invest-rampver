@@ -1,5 +1,26 @@
-ErrorDocument 404 https://invest.rampver.com/support/404.html
-ErrorDocument 500 https://invest.rampver.com/support/500.html
+ErrorDocument 404 https://invest.rampver.com/response/404.html
+ErrorDocument 500 https://invest.rampver.com/response/500.html
+
+RewriteEngine on
+Redirect 301 /soldivo.html /funds/soldivo.html
+Redirect 301 /atram.html /funds/atram.html
+Redirect 301 /pemi.html /funds/pemi.html
+Redirect 301 /pami.html /funds/pami.html
+Redirect 301 /slamci.html /funds/slamci.html
+Redirect 301 /fami.html /funds/fami.html
+Redirect 301 /fund-details.html /funds/fund-details.html
+Redirect 301 /aggressive.html /funds/aggressive.html
+Redirect 301 /moderate.html /funds/moderate.html
+Redirect 301 /conservative.html /funds/conservative.html
+Redirect 301 /recommended.html /funds/recommended.html
+Redirect 301 /indexfunds.html /funds/index.html
+Redirect 301 /all.html /funds/all.html
+Redirect 301 /dollar.html /funds/dollar.html
+Redirect 301 /soldivo-bank-account.html /support/soldivo-bank-account.html
+Redirect 301 /soldivo-reference.html /support/soldivo-reference.html
+Redirect 301 /daily-navps.html /support/daily-navps.html
+Redirect 301 /ffs.html /support/ffs.html
+
 
 <IfModule mod_headers.c>
     Header set Referrer-Policy "origin"
