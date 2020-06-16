@@ -2,7 +2,6 @@
 const genInq = document.createElement('div');
 
 // set component class
-genInq.className = 'btn text-left';
 
 // create the sticky btn and modal component
 genInq.innerHTML = `
@@ -31,6 +30,9 @@ genInq.innerHTML = `
               <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f12057-o1" />
               <input type="hidden" name="_wpcf7_container_post" value="0" />
             </div>
+            <input type="hidden" name="campaignTitleEntry" id="campaignTitleEntry"/>
+					<input type="hidden" name="promotedFund" id="promotedFund" />
+					<input type="hidden" name="otherTags" id="otherTags" />
             <input type="hidden" name="urlGet" id="urlGet" />
             <div class="form-group">
               <label for="salutation" class="claimHeader">Salutation*</label>
@@ -128,3 +130,10 @@ function submitDetails() {
     document.getElementById('pulse-load').classList.add('d-none');
   }, 15000);
 }
+
+setTimeout(function load() {
+  var title = document.title;
+  document.getElementById('campaignTitleEntry').value = title;
+  document.getElementById('promotedFund').value = title;
+  document.getElementById('otherTags').value = title;
+}, 3000);
