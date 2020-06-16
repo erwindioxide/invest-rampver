@@ -50,6 +50,7 @@ navbar.innerHTML = `
 						<li class="dropdown nav-item" style="z-index: 5;">
 						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Learning<b class="caret"></b></a>
 						<ul class="dropdown-menu mt-0" style="background-color: #124735; !important; border:none;">
+						<li class="nav-link"><a href="https://youtube.com/rampverfinancials" target="_blank">Watch on Youtube</a></li>
 						<li class="nav-link"><a href="https://medium.com/rampver-reads" target="_blank">Rampver Reads</a></li>
 						<li class="nav-link"><a href="https://rampver.com/radio" target="_blank">Rampver Radio</a></li>
 						<li class="nav-link"><a href="../inquire/ebook.html?id=1">Free E-Book!</a></li>

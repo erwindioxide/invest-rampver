@@ -228,11 +228,38 @@
                 <!-- SOA Modal -->
 
                 <br />
-                <!-- dropdown -->
-                <div class="dropdown mt-3" id="fundDropdown"></div>
-                <script src="../components/fundDropdown.js"></script>
-                <!-- dropdown -->
-                <br />
+                <div class="px-2 m-0">
+                    <h4 class="claimHeader text-center">
+                        Must Watch!
+                    </h4>
+                    <br>
+                    <style>
+                        .embed-container {
+                            position: relative;
+                            padding-bottom: 56.25%;
+                            height: 0;
+                            overflow: hidden;
+                            max-width: 100%;
+                        }
+
+                        .embed-container iframe,
+                        .embed-container object,
+                        .embed-container embed {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    </style>
+                    <div data-stein-url="https://api.steinhq.com/v1/storages/5ee860c983c30d0425e2c4ea/youtube"
+                        data-stein-limit="3">
+                        <div class='embed-container'><iframe src='{{vidUrl}}' frameborder='0' allowfullscreen></iframe>
+                        </div>
+                        <h6 class="claimHeader text-center mt-2 mb-5">{{vidTitle}}</h6>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -274,6 +301,10 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PG4287G" height="0" width="0"
             style="display: none; visibility: hidden;"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+    <!-- stein expedite -->
+    <script src="https://unpkg.com/stein-expedite@0.0.4/dist/index.js"></script>
+    <!-- stein expedite -->
 
     <script src="../dependencies/popper.min.js"></script>
     <script src="../dependencies/bootstrap.min.js"></script>
