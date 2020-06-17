@@ -101,6 +101,7 @@ function dataFill(json) {
   );
   document.getElementById('ffslink').href = eval(renderData + '.ffslink');
   // document.getElementById('profilelink').href = code + '.html#profilelink';
+  document.getElementById('forms').href = "https://rampver.com/forms";
   document.getElementById('fundnamevalue').value = eval(
     renderData + '.fundname'
   );
