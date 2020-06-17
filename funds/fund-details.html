@@ -231,9 +231,9 @@
                 <div id="indivSoaSet"></div>
                 <script src="../components/indivSoa.js"></script>
                 <!-- SOA Modal -->
-
                 <br />
-                <div class="px-2 m-0">
+                <!-- stein gallery -->
+                <div class="px-4 m-0">
                     <h4 class="claimHeader text-center">
                         Must Watch!
                     </h4>
@@ -259,11 +259,16 @@
                     </style>
                     <div data-stein-url="https://api.steinhq.com/v1/storages/5ee860c983c30d0425e2c4ea/youtube"
                         data-stein-limit="3">
-                        <div class='embed-container'><iframe src='{{vidUrl}}' frameborder='0' allowfullscreen></iframe>
+                        <div class='embed-container'><iframe src='{{vidEmbed}}' frameborder='0'
+                                allowfullscreen></iframe>
                         </div>
-                        <h6 class="claimHeader text-center mt-2 mb-4">{{vidTitle}}</h6>
+                        <a href="{{vidUrl}}" target="_blank">
+                            <h6 class="claimHeader text-center mb-4 mt-2 ml-2">{{vidTitle}}</h6>
+                        </a>
                     </div>
                 </div>
+                <!-- stein gallery -->
+
 
             </div>
         </div>

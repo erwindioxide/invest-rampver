@@ -41,11 +41,17 @@ function dataFill(json) {
   );
   document.getElementById('imageurl').src = eval(renderData + '.imageurl');
   document.getElementById('fundQR').src =
-    'https://api.qrserver.com/v1/create-qr-code/?size=200x200&color=124735&data=https://invest.rampver.com/fund-details.html?fundmanagercode=' +
+    'https://api.qrserver.com/v1/create-qr-code/?size=200x200&color=256141&data=https://invest.rampver.com/fund-details.html?fundmanagercode=' +
+    codeBig +
+    '%26id=' +
+    id;
+  document.getElementById('downloadQR').href =
+    'https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&color=256141&data=https://invest.rampver.com/fund-details.html?fundmanagercode=' +
     codeBig +
     '%26id=' +
     id;
   document.getElementById('QRName').innerHTML = eval(renderData + '.fundname');
+  document.getElementById('downloadQR').download = eval(renderData + '.fundname');
   let lazyload = eval(renderData + '.imageurl');
   document.getElementById('imageurl').setAttribute('data-src', lazyload);
   document.getElementById('navps').innerHTML = eval(renderData + '.navps');
@@ -158,16 +164,6 @@ function dataFill(json) {
     },
     rangeSelector: {
       buttons: [{
-          type: 'month',
-          count: 1,
-          text: '1m',
-        },
-        {
-          type: 'month',
-          count: 3,
-          text: '3m',
-        },
-        {
           type: 'year',
           count: 3,
           text: '3y',
@@ -193,7 +189,7 @@ function dataFill(json) {
           text: 'All',
         },
       ],
-      selected: 5,
+      selected: 3,
       inputPosition: {
         align: 'left',
         x: 0,

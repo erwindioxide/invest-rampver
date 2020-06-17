@@ -28,6 +28,7 @@ shareQR_indivFund.innerHTML = `
 													<img id="fundQR"
 															class="mx-auto rounded border-secondary border px-3 py-3" />
 													<br />
+													<a id="downloadQR" download class="btn rfbtn text-white mt-3 text-center" target="_blank">Download QR</a>
 											</div>
 									</div>
 							</div>
